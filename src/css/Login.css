@@ -1,0 +1,65 @@
+/* Estilo do contêiner do login */
+
+body {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 100vh; /* Altura mínima da viewport */
+  margin: 0; /* Remove a margem padrão */
+  background-color: #f0f0f0; /* Define a cor de fundo do body, se necessário */
+}
+
+.login-container {
+  background-color: #f8bbbb; /* Cor de fundo do contêiner */
+  width: 400px; /* Largura do contêiner */
+  margin: 50px auto; /* Centraliza o contêiner */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Estilo dos campos de entrada */
+.input-field {
+  width: 90%; /* Largura completa dentro do contêiner */
+  padding: 10px; /* Espaçamento interno para o texto */
+  margin-bottom: 15px; /* Espaçamento entre os campos */
+  border: 1px solid #ccc; /* Borda */
+  border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Estilo do checkbox */
+.checkbox {
+  margin-bottom: 15px; /* Espaçamento abaixo do checkbox */
+}
+
+/* Estilo dos botões */
+.button {
+  width: 100%; /* Largura completa dentro do contêiner */
+  padding: 10px; /* Espaçamento interno */
+  border: none; /* Sem borda */
+  border-radius: 4px; /* Bordas arredondadas */
+  margin-bottom: 10px; /* Espaçamento entre os botões */
+  cursor: pointer; /* Cursor de clique */
+}
+
+/* Estilo específico para o botão de Entrar */
+.button-entrar {
+  background-color: #333; /* Cor de fundo do botão Entrar */
+  color: white; /* Cor do texto */
+}
+
+/* Estilo específico para o botão de Cadastrar */
+.button-cadastrar {
+  background-color: #555; /* Cor de fundo do botão Cadastrar */
+  color: white; /* Cor do texto */
+}
+
+/* Estilo para o texto do link de cadastro */
+.cadastro-text {
+  text-align: center; /* Centraliza o texto */
+  margin-top: 20px; /* Espaçamento acima do texto */
+}
+
+h2 {
+  text-align: center; /* Centraliza o texto horizontalmente */
+}

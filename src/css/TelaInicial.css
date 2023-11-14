@@ -1,0 +1,59 @@
+.tela-inicial {
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.search-bar input {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.search-bar button {
+  padding: 5px;
+  cursor: pointer;
+  background-color: #f8bbbb;
+}
+
+.shopping-cart {
+  display: flex;
+  align-items: center;
+}
+
+.cart-count {
+  background-color: #f8bbbb;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-left: 5px;
+}
+
+.featured {
+  text-align: center;
+  padding: 20px;
+}
+
+.featured-image {
+  max-width: 30%;
+  height: auto;
+  border-radius: 50px; /* Ajuste o raio da borda conforme o design */
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.category, footer {
+  text-align: center;
+}
+
+h1 {
+  text-align: center; /* Centraliza o texto horizontalmente */
+}

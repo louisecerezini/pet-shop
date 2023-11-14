@@ -1,0 +1,30 @@
+.cadastro-container {
+  background-color: #f8bbbb; /* Cor de fundo do contêiner de cadastro */
+  width: 400px; /* Largura do contêiner */
+  margin: 0 auto; /* Centraliza o contêiner */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.cadastro-container h2 {
+  text-align: center; /* Centraliza o título */
+}
+
+.cadastro-container input {
+  width: 90%; /* Largura completa dentro do contêiner */
+  padding: 10px; /* Espaçamento interno para o texto */
+  margin-bottom: 15px; /* Espaçamento entre os campos */
+  border: 1px solid #ccc; /* Borda */
+  border-radius: 4px; /* Bordas arredondadas */
+}
+
+.cadastro-btn {
+  width: 100%; /* Largura completa */
+  padding: 10px; /* Espaçamento interno */
+  border: none; /* Sem borda */
+  border-radius: 4px; /* Bordas arredondadas */
+  background-color: #333; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  cursor: pointer; /* Cursor de clique */
+}
