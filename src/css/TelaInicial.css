@@ -39,7 +39,7 @@
 }
 
 .featured-image {
-  max-width: 30%;
+  max-width:40%;
   height: auto;
   border-radius: 50px; /* Ajuste o raio da borda conforme o design */
 }

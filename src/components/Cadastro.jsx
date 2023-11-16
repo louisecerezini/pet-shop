@@ -29,7 +29,7 @@ function Cadastro() {
     const user = JSON.parse(localStorage.getItem('user'));
     user.cadastro=form;
     localStorage.setItem('user', JSON.stringify(user));
-    navigate('/cadrastroDoPet');
+    navigate('/cadastroDoPet');
   };
 
   const handleSubmit = async (event) => {

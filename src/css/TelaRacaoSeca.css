@@ -1,0 +1,81 @@
+.racao-seca-container {
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-bar input {
+  padding: 5px;
+  width: 100%;
+  margin-right: -40px; /* Ajuste para sobrepor o botão de lupa */
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+
+
+.shopping-cart {
+  display: flex;
+  align-items: center;
+}
+
+.cart-count {
+  background-color:  #f8bbbb;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-left: 5px;
+}
+
+.featured {
+  text-align: center;
+  padding: 20px;
+}
+
+.featured-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+}
+
+.category {
+  text-align: center;
+  cursor: pointer;
+}
+
+.category span {
+  font-size: 2em; /* Ajuste conforme o tamanho que deseja para os ícones */
+}

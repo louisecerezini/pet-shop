@@ -2,11 +2,14 @@ import React from 'react';
 import '../css/TelaInicial.css'; 
 import { Pets, ShoppingCart, Shower } from '@mui/icons-material';
 import  { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 
 function TelaInicial() {
   const [searchTerm, setSearchTerm] = useState(''); // estado para armazenar o valor 
+
+  const navigate = useNavigate();
 
   const handleSearch = (event) => {
     event.preventDefault();
@@ -15,6 +18,18 @@ function TelaInicial() {
 
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value);
+  };
+
+  const goToFood = () => {
+    navigate('/racaoseca'); 
+  };
+  
+const goToFood2 = () => {
+    navigate('/racaoumida');
+  };
+
+  const goToFood3 = () => {
+    navigate('/banhoetosa');
   };
 
   return (
@@ -37,22 +52,26 @@ function TelaInicial() {
         </section>
         <section className="categories">
           <div className="category">
-            <span></span>
+            <button onClick={goToFood}>
             <Pets/>
             <h3>Ração seca</h3>
+            </button>
           </div>
           <div className="category">
-            <span></span>
+            <button onClick={goToFood2}>
             <Pets/>
             <h3>Ração úmida</h3>
+            </button>
           </div>
           <div className="category">
-            <span></span>
+            <button onClick={goToFood3}>
             <Shower/>
             <h3>Banho & tosa</h3>
+            </button>
           </div>
         </section>
       </main>
+      
       <footer className="footer">
     Direitos reservados à PetShopLouise©
   </footer>

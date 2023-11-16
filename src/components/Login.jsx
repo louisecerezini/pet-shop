@@ -21,7 +21,7 @@ function Login() {
   const saveUser = (event) => {
     event.preventDefault();
     localStorage.setItem('user', JSON.stringify({ email }));
-    navigate('/cadrastro');
+    navigate('/cadastro');
   };
 
   return (
@@ -58,9 +58,6 @@ function Login() {
             onClick={saveUser}
           >
             Entrar
-          </button>
-          <button className="button button-cadastrar" type="submit">
-            Cadrastrar
           </button>
         </div>
         <div className="cadastro-text">
