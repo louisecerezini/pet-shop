@@ -8,6 +8,8 @@ import TelaRacaoSeca from './components/TelaRacaoSeca';
 import TelaRacaoUmida from './components/TelaRacaoUmida';
 import BanhoTosa from './components/BanhoTosa';
 import ProdutoSelecionado from './components/ProdutoSelecionado';
+import Carrinho from './components/Carrinho';
+import Agendamentos from './components/Agendamentos';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/telaracaoumida" element={<TelaRacaoUmida/>} />
         <Route path="/banhotosa" element={<BanhoTosa/>} />
         <Route path="/produtoselecionado" element={<ProdutoSelecionado/>} />
+        <Route path="/carrinho" element={<Carrinho/>} />
+        <Route path="/agendamentos" element={<Agendamentos/>} />
       </Routes>
     </Router>
   );

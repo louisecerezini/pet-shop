@@ -1,8 +1,11 @@
-import React from 'react';
+
 import '../css/ProdutoSelecionado.css'; 
 import { ShoppingCart } from '@mui/icons-material';
+import React, { useEffect } from 'react';
 
 function ProdutoSelecionado() {
+
+  
   const [quantidadeRacaoSeca, setQuantidadeRacaoSeca] = React.useState(1);
   const [quantidadeRacaoSeca2, setQuantidadeRacaoSeca2] = React.useState(1);
   const [quantidadeRacaoSeca3, setQuantidadeRacaoSeca3] = React.useState(1);
@@ -40,6 +43,72 @@ function ProdutoSelecionado() {
   const incrementarBanhoTosa3 = () => setQuantidadeBanhoTosa3((q) => q + 1);
   const decrementarBanhoTosa3 = () => setQuantidadeBanhoTosa3((q) => q - 1);
 
+
+   useEffect(() => {
+    try {
+      // Tenta recuperar e parsear os produtos do localStorage
+      const savedProdutos = localStorage.getItem('produtos');
+      if (savedProdutos) {
+        const produtos = JSON.parse(savedProdutos);
+  
+        // Atualiza os estados se os dados estiverem presentes
+        if (produtos.racaoSeca) {
+          setQuantidadeRacaoSeca(produtos.racaoSeca.quantidadeRacaoSeca || 1);
+          setQuantidadeRacaoSeca2(produtos.racaoSeca.quantidadeRacaoSeca2 || 1);
+          setQuantidadeRacaoSeca3(produtos.racaoSeca.quantidadeRacaoSeca3 || 1);
+        }
+        if (produtos.racaoUmida) {
+          setQuantidadeRacaUmida(produtos.racaoUmida.quantidadeRacaoUmida || 1);
+          setQuantidadeRacaUmida2(produtos.racaoUmida.quantidadeRacaoUmida2 || 1);
+          setQuantidadeRacaUmida3(produtos.racaoUmida.quantidadeRacaoUmida3 || 1);
+        }
+        if (produtos.banhoTosa) {
+          setQuantidadeBanhoTosa(produtos.banhoTosa.quantidadeBanhoTosa || 1);
+          setQuantidadeBanhoTosa2(produtos.banhoTosa.quantidadeBanhoTosa2 || 1);
+          setQuantidadeBanhoTosa3(produtos.banhoTosa.quantidadeBanhoTosa3 || 1);
+        }
+      }
+    } catch (error) {
+      // Captura qualquer erro que ocorra durante o parsing do localStorage
+      console.error("Erro ao carregar os dados do localStorage:", error);
+    }
+  }, []);
+
+  useEffect(() => {
+    const produtos = {
+      racaoSeca: {
+        quantidadeRacaoSeca,
+        imagemRacaoSeca:'racaoMonello.jpg',
+        quantidadeRacaoSeca2,
+        imagemRacaoSeca2:'racaoMonello.jpg',
+        quantidadeRacaoSeca3,
+        imagemRacaoSeca3:'racaoMonello.jpg',
+      },
+      racaoUmida: {
+        quantidadeRacaUmida,
+        quantidadeRacaUmida2,
+        quantidadeRacaUmida3,
+      },
+      banhoTosa: {
+        quantidadeBanhoTosa,
+        quantidadeBanhoTosa2,
+        quantidadeBanhoTosa3,
+      }
+    };
+
+    localStorage.setItem('produtos', JSON.stringify(produtos));
+  }, [
+    quantidadeRacaoSeca,
+    quantidadeRacaoSeca2,
+    quantidadeRacaoSeca3,
+    quantidadeRacaUmida,
+    quantidadeRacaUmida2,
+    quantidadeRacaUmida3,
+    quantidadeBanhoTosa,
+    quantidadeBanhoTosa2,
+    quantidadeBanhoTosa3,
+    menuSelecionado
+  ]);
 
   const getContent = () => {
     if (menuSelecionado === 'racaoSeca'){
