@@ -1,30 +1,41 @@
 import React, { useState } from 'react';
-import '../css/Carrinho.css'; 
+import '../css/Carrinho.css';
 
 function Carrinho() {
-  const [produtos, setProdutos] = useState([
-    { id: 1, nome: 'Produto 1', preco: 50.00, quantidade: 1 },
-    { id: 2, nome: 'Produto 2', preco: 90.00, quantidade: 1 },
-    { id: 3, nome: 'Produto 3', preco: 96.00, quantidade: 1 },
-  ]);
+  const [produtos, setProdutos] = useState(() => {
+    const usuarioSalvo = localStorage.getItem('user');
+    const carrinhoSalvo = usuarioSalvo ? JSON.parse(usuarioSalvo).produtosCarrinho: [];
+    return carrinhoSalvo ? carrinhoSalvo : [];
+  });
 
   const incrementar = (id) => {
-    setProdutos(produtos.map(produto =>
-      produto.id === id ? { ...produto, quantidade: produto.quantidade + 1 } : produto
-    ));
+    setProdutos(
+      produtos.map((produto) =>
+        produto.id === id
+          ? { ...produto, quantidade: produto.quantidade + 1 }
+          : produto
+      )
+    );
   };
 
   const decrementar = (id) => {
-    setProdutos(produtos.map(produto =>
-      produto.id === id ? { ...produto, quantidade: Math.max(produto.quantidade - 1, 1) } : produto
-    ));
+    setProdutos(
+      produtos.map((produto) =>
+        produto.id === id
+          ? { ...produto, quantidade: Math.max(produto.quantidade - 1, 1) }
+          : produto
+      )
+    );
   };
 
   const removerProduto = (id) => {
-    setProdutos(produtos.filter(produto => produto.id !== id));
+    setProdutos(produtos.filter((produto) => produto.id !== id));
   };
 
-  const valorTotal = produtos.reduce((total, produto) => total + produto.preco * produto.quantidade, 0);
+  const valorTotal = produtos.reduce(
+    (total, produto) => total + produto.preco * produto.quantidade,
+    0
+  );
 
   return (
     <div className="carrinho-container">
@@ -33,12 +44,15 @@ function Carrinho() {
         {/* Restante do seu cabeçalho do carrinho */}
       </header>
       <main className="carrinho-main">
-        {produtos.map(produto => (
+        {produtos.map((produto) => (
           <div className="carrinho-produto" key={produto.id}>
             <button onClick={() => removerProduto(produto.id)}>X</button>
-            <img src={`./images/${produto.imagemRacaoSeca}`} alt={produto.nome} />
+            <img
+              src={`./images/${produto.imagemUrl}`}
+              alt={produto.descricao}
+            />
             <div>
-              <p>{produto.nome}</p>
+              <p>{produto.descricao}</p>
               <div className="carrinho-quantidade">
                 <button onClick={() => decrementar(produto.id)}>-</button>
                 <span>{produto.quantidade}</span>
