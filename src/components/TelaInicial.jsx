@@ -21,15 +21,15 @@ function TelaInicial() {
   };
 
   const goToFood = () => {
-    navigate('/racaoseca'); 
+    navigate('/telaracaoseca'); 
   };
   
 const goToFood2 = () => {
-    navigate('/racaoumida');
+    navigate('/telaracaoumida');
   };
 
   const goToFood3 = () => {
-    navigate('/banhoetosa');
+    navigate('/banhotosa');
   };
 
   return (

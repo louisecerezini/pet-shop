@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  text-align: center;
 }
 
 /* Estilos para as informações do comprador e método de pagamento */
@@ -22,7 +23,7 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="number"] {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   margin: 5px 0;
   border: 1px solid #ccc;
@@ -33,7 +34,7 @@ input[type="number"] {
 button[type="submit"] {
   background-color:  #f8bbbb;
   color: black;
-  padding: 15px 20px;
+  padding: 10px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -58,4 +59,114 @@ input[type="radio"] {
   }
 }
 
-/* Adicione estilos adicionais abaixo conforme necessário */
+.tele-busca {
+  margin: 1em 0;
+  padding: 1em;
+  background-color: #f5f5f5; /* Light grey background for the section */
+  border-radius: 5px;
+}
+
+.tele-busca label {
+  display: flex;
+  align-items: center; /* Aligns the checkbox and label text vertically */
+  cursor: pointer; /* Changes cursor to pointer when hovering over the label */
+  font-size: 1em; /* Adjust font size as needed */
+}
+
+.tele-busca input[type="checkbox"] {
+  margin-right: 1em; /* Adds some space between the checkbox and the label text */
+  cursor: pointer; /* Changes cursor to pointer when hovering over the checkbox */
+}
+
+/* Custom styles for the checkbox */
+.tele-busca input[type="checkbox"] {
+  appearance: none; /* Removes default styling */
+  background-color: #fff; /* White background */
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1em; /* Width of the custom checkbox */
+  height: 1em; /* Height of the custom checkbox */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded borders */
+  transform: translateY(-0.075em); /* Align checkbox */
+  display: grid;
+  place-content: center;
+}
+
+/* Custom styles for when the checkbox is checked */
+.tele-busca input[type="checkbox"]:checked::before {
+  content: "✓"; /* Custom checkmark */
+  font-size: 1.5em; /* Size of the checkmark */
+  color: #4CAF50; /* Checkmark color */
+}
+
+/* Styles for the date picker container */
+.date-picker-container {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Styles for the date picker label */
+.date-picker-container label {
+  display: block;
+  margin-bottom: .5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Styles for the date picker input field */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  height: 2.5rem;
+  box-sizing: border-box;
+}
+
+/* Styles for the date picker pop-up */
+.react-datepicker {
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker__header {
+  background-color: #fff;
+  border-bottom: none;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+  color: #333;
+}
+
+.react-datepicker__day-name, 
+.react-datepicker__day, 
+.react-datepicker__time-name {
+  color: #333;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-range,
+.react-datepicker__day--in-selecting-range {
+  background-color: #007bff;
+  color: white;
+}
+
+.react-datepicker__day--keyboard-selected {
+  background-color: #cccccc;
+  color: #333;
+}
+
+.react-datepicker__day--outside-month {
+  color: #757575;
+}
