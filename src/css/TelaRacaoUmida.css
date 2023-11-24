@@ -11,7 +11,7 @@
   padding: 10px;
 }
 
-..search-bar {
+.search-bar {
   display: flex;
   align-items: center;
   position: relative;
