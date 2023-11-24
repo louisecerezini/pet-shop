@@ -34,9 +34,9 @@ body {
 
 /* Estilo dos botões */
 .button {
-  width: 100%; /* Largura completa dentro do contêiner */
+  width: 95%; /* Largura completa dentro do contêiner */
   padding: 10px; /* Espaçamento interno */
-  border: none; /* Sem borda */
+  border: 5px; /* Sem borda */
   border-radius: 4px; /* Bordas arredondadas */
   margin-bottom: 10px; /* Espaçamento entre os botões */
   cursor: pointer; /* Cursor de clique */
@@ -44,15 +44,19 @@ body {
 
 /* Estilo específico para o botão de Entrar */
 .button-entrar {
-  background-color: #333; /* Cor de fundo do botão Entrar */
-  color: white; /* Cor do texto */
-}
+  background-color:  rgb(232, 240, 254) !important; 
+  border: 5px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  }
 
-/* Estilo específico para o botão de Cadastrar */
-.button-cadastrar {
-  background-color: #555; /* Cor de fundo do botão Cadastrar */
-  color: white; /* Cor do texto */
-}
+
 
 /* Estilo para o texto do link de cadastro */
 .cadastro-text {
@@ -63,3 +67,4 @@ body {
 h2 {
   text-align: center; /* Centraliza o texto horizontalmente */
 }
+

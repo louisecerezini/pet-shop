@@ -1,43 +1,45 @@
 import React, { useState } from 'react';
-import '../css/Agendamentos.css'; 
-
-
+import '../css/Agendamentos.css'; // Importando o CSS para o componente
 
 function Agendamentos() {
-  // Supondo que você tenha um estado para os detalhes do comprador
+  // Estados do componente
+  const [metodoPagamento, setMetodoPagamento] = useState('boleto'); // Estado para o método de pagamento, padrão 'boleto'
+  const [selectedDate, setSelectedDate] = useState(''); // Estado para a data selecionada
+  const [selectedTime, setSelectedTime] = useState(''); // Estado para a hora selecionada
 
-
-  const [metodoPagamento, setMetodoPagamento] = useState('boleto');
-  const [selectedDate, setSelectedDate] = useState('');
-  const [selectedTime, setSelectedTime] = useState('');
-
-  // Handler for input changes
+  // Função para lidar com mudanças nos inputs
   const handleChange = (e) => {
     const { name, value } = e.target;
     setComprador((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  // Handler to change payment method
+  // Função para alterar o método de pagamento
   const handlePaymentChange = (e) => {
     setMetodoPagamento(e.target.value);
   };
 
-  // Form submission handler
+  // Função para lidar com o envio do formulário
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Date selected:', selectedDate);
-    console.log('Time selected:', selectedTime);
-    // Logic to handle submission goes here
+    e.preventDefault(); // Previne o comportamento padrão do formulário
+    console.log('Date selected:', selectedDate); // Log da data selecionada
+    console.log('Time selected:', selectedTime); // Log da hora selecionada
   };
 
   return (
+    // Estrutura HTML do componente
     <div className="agendamento-container">
       <h2>Agendamento Banho & Tosa</h2>
       <form onSubmit={handleSubmit}>
-        {/* Buyer information section */}
-        {/* ... add input fields for buyer details here ... */}
+        {/* Seção de agendamentos */}
+        <div className="agendamentos">
+          <p> Precisa do serviço de Agendamento?</p>
+          <select>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+          </select>
+        </div>
 
-        {/* Date and Time Selection */}
+        {/* Input para data */}
         <label>
           Date:
           <input
@@ -46,6 +48,8 @@ function Agendamentos() {
             onChange={(e) => setSelectedDate(e.target.value)}
           />
         </label>
+
+        {/* Input para hora */}
         <label>
           Time:
           <input
@@ -55,19 +59,19 @@ function Agendamentos() {
           />
         </label>
 
-        {/* Tele search services */}
+        {/* Seção de Tele Busca */}
         <div className="tele-busca">
           <p> Precisa dos serviços de Tele Busca?</p>
           <select>
-            <option value = 'Sim'> Sim</option>
-            <option value = 'Não'> Não</option>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
           </select>
-          <button type="submit">Enviar</button>
         </div>
 
-        {/* Payment Method Section */}
+        {/* Seção de método de pagamento */}
         <div className="pagamento-info">
           <h2>Método de Pagamento</h2>
+          {/* Opções de pagamento */}
           <label>
             <input
               type="radio"
@@ -92,7 +96,7 @@ function Agendamentos() {
             <input
               type="radio"
               name="metodoPagamento"
-              value="debito" // Fixed value to "debito" for debit card
+              value="debito"
               checked={metodoPagamento === 'debito'}
               onChange={handlePaymentChange}
             />
@@ -106,4 +110,4 @@ function Agendamentos() {
   );
 }
 
-export default Agendamentos;
+export default Agendamentos; // Exportando o componente

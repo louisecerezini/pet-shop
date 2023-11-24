@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import '../css/Cadastro.css';
-import { useNavigate } from 'react-router-dom';
+// Importações necessárias para o componente.
+import React, { useState } from 'react'; // useState do React para gerenciar estados.
+import '../css/Cadastro.css'; // Arquivo CSS para estilização.
+import { useNavigate } from 'react-router-dom'; // useNavigate do react-router-dom para navegação.
 
-
+// Definição do componente funcional Cadastro.
 function Cadastro() {
+  // Estado 'form' para armazenar os dados do formulário.
   const [form, setForm] = useState({
     nome: '',
     email: '',
@@ -14,8 +16,10 @@ function Cadastro() {
     cidade: '',
     telefone: '',
   });
+  // Hook para navegação.
   const navigate = useNavigate();
 
+  // Função para lidar com mudanças nos campos do formulário.
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({
@@ -24,44 +28,47 @@ function Cadastro() {
     });
   };
 
+  // Função para salvar o usuário no localStorage e navegar para outra rota.
   const saveUser = (event) => {
     event.preventDefault();
     const user = JSON.parse(localStorage.getItem('user'));
-    user.cadastro=form;
+    user.cadastro = form;
     localStorage.setItem('user', JSON.stringify(user));
     navigate('/cadastroDoPet');
   };
 
+  // Função para lidar com o envio do formulário.
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log('Dados para cadastro:', form);
 
-    // Simula o envio de dados para um servidor
+    // Simula o envio de dados para um servidor.
     try {
       await simulateAPICall(form);
       alert('Cadastro realizado com sucesso!');
-      // limpar o formulário ou redirecionar o usuário para outra página
+      // Aqui você pode limpar o formulário ou redirecionar o usuário.
     } catch (error) {
       alert('Falha ao realizar o cadastro. Tente novamente mais tarde.');
       console.error('Erro ao enviar dados de cadastro:', error);
     }
   };
 
-  // Função para simular uma chamada de API
+  // Função para simular uma chamada de API.
   function simulateAPICall(data) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        // Simula uma verificação simples: se há um email, a chamada "sucede"
+        // Simula uma verificação: se há um email, a chamada "sucede".
         if (data.email) {
           console.log('Dados enviados para a API:', data);
           resolve('Sucesso');
         } else {
           reject('Falha');
         }
-      }, 1000); // Simula um atraso de 1 segundo
+      }, 1000); // Simula um atraso de 1 segundo.
     });
   }
 
+  // Renderização do formulário.
   return (
     <div className="cadastro-container">
       <h2>Cadastro de clientes</h2>

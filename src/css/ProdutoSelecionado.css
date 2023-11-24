@@ -97,3 +97,7 @@
   padding: 5px 10px; /* Padding interno dos botões */
   margin: 0 5px; /* Espaço entre os botões e o número */
 }
+
+.shopping-cart {
+  cursor: pointer;
+}
