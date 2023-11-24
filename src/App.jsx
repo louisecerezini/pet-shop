@@ -15,16 +15,16 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/cadastroDoPet" element={<CadastroDoPet />} />
         <Route path="/telainicial" element={<TelaInicial />} />
-        <Route path="/telaracaoseca" element={<TelaRacaoSeca/>} />
-        <Route path="/telaracaoumida" element={<TelaRacaoUmida/>} />
-        <Route path="/banhotosa" element={<BanhoTosa/>} />
-        <Route path="/produtoselecionado" element={<ProdutoSelecionado/>} />
-        <Route path="/carrinho" element={<Carrinho/>} />
-        <Route path="/agendamentos" element={<Agendamentos/>} />
+        <Route path="/telaracaoseca" element={<TelaRacaoSeca />} />
+        <Route path="/telaracaoumida" element={<TelaRacaoUmida />} />
+        <Route path="/banhotosa" element={<BanhoTosa />} />
+        <Route path="/produtoselecionado" element={<ProdutoSelecionado />} />
+        <Route path="/carrinho" element={<Carrinho />} />
+        <Route path="/agendamentos" element={<Agendamentos />} />
       </Routes>
     </Router>
   );
