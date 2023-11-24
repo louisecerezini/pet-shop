@@ -1,10 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/pet-shop/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Petshop app</title>
+    <script>
+      // Check for any 404 redirect, stored in sessionStorage
+      if (sessionStorage.redirect) {
+        delete sessionStorage.redirect;
+        // Avoid the most recent redirect being stuck in a loop
+        setTimeout(() => {
+          window.location = sessionStorage.redirect;
+        }, 0);
+      }
+    </script>
     <script type="module" crossorigin src="/pet-shop/assets/main-47c7f426.js"></script>
     <link rel="stylesheet" href="/pet-shop/assets/index-6cbebb28.css">
   </head>
