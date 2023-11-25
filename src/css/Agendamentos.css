@@ -34,7 +34,7 @@ select {
   margin-bottom: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  box-sizing: border-box; /* Ensure padding doesn't affect overall width */
+  box-sizing: border-box; 
 }
 
 input[type='radio'] {
@@ -65,7 +65,7 @@ button[type="submit"] {
   text-decoration: none;
 }
 
-/* Estilo para títulos de seção */
+
 .pagamento-info h2 {
   font-size: 20px;
   margin-bottom: 10px;

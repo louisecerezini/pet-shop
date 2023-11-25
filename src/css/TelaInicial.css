@@ -53,24 +53,24 @@
 }
 
 h1 {
-  text-align: center; /* Centraliza o texto horizontalmente */
+  text-align: center; 
 }
 
 footer {
-  background-color: #333; /* Cor de fundo */
-  color: white; /* Cor do texto */
-  text-align: center; /* Centraliza o conteúdo */
-  padding: 10px 0; /* Espaço interno */
-  width: 100%; /* Largura total */
+  background-color: #333; 
+  color: white; 
+  text-align: center; 
+  padding: 10px 0; 
+  width: 100%; 
 }
 
 footer a {
-  color: #fff; /* Cor do link */
-  padding: 0 10px; /* Espaço entre os links */
+  color: #fff; 
+  padding: 0 10px; 
 }
 
 @media (max-width: 600px) {
   footer {
-    text-align: center; /* Centraliza o conteúdo para telas pequenas */
+    text-align: center; 
   }
 }

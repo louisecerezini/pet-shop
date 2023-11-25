@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './components/Login';
-import Cadastro from './components/Cadastro';
-import CadastroDoPet from './components/CadastroDoPet';
-import TelaInicial from './components/TelaInicial';
-import TelaRacaoSeca from './components/TelaRacaoSeca';
-import TelaRacaoUmida from './components/TelaRacaoUmida';
-import BanhoTosa from './components/BanhoTosa';
-import ProdutoSelecionado from './components/ProdutoSelecionado';
-import Carrinho from './components/Carrinho';
-import Agendamentos from './components/Agendamentos';
+import Login from '../components/Login';
+import Cadastro from '../components/Cadastro';
+import CadastroDoPet from '../components/CadastroDoPet';
+import TelaInicial from '../components/TelaInicial';
+import TelaRacaoSeca from '../components/TelaRacaoSeca';
+import TelaRacaoUmida from '../components/TelaRacaoUmida';
+import BanhoTosa from '../components/BanhoTosa';
+import ProdutoSelecionado from '../components/ProdutoSelecionado';
+import Carrinho from '../components/Carrinho';
+import Agendamentos from '../components/Agendamentos';
 
 function App() {
   return (

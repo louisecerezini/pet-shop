@@ -20,7 +20,7 @@
 .search-bar input {
   padding: 5px;
   width: 100%;
-  margin-right: -40px; /* Ajuste para sobrepor o botão de lupa */
+  margin-right: -40px; 
   border-radius: 20px;
   border: 1px solid #ccc;
 }
@@ -73,5 +73,5 @@
 }
 
 .category span {
-  font-size: 2em; /* Ajuste conforme o tamanho que deseja para os ícones */
+  font-size: 2em; 
 }

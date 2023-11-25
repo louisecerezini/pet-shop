@@ -1,11 +1,10 @@
-/* Arquivo ProdutoSelecionado.css */
 .produto-selecionado-container {
   display: flex;
   font-family: 'Arial', sans-serif;
 }
 
 .menu-lateral {
-  flex-basis: 200px; /* Largura fixa do menu lateral */
+  flex-basis: 200px; 
   border-right: 1px solid #ccc;
   padding: 10px;
 }
@@ -24,16 +23,14 @@
   cursor: pointer;
 }
 
-/* ... estilos anteriores */
 
-/* Arquivo ProdutoSelecionado.css */
 .produto-selecionado-container {
   display: flex;
   font-family: 'Arial', sans-serif;
 }
 
 .menu-lateral {
-  flex-basis: 200px; /* Largura fixa do menu lateral */
+  flex-basis: 200px; 
   border-right: 1px solid #ccc;
   padding: 10px;
 }
@@ -53,15 +50,15 @@
 }
 
 .produtos {
-  flex-grow: 1; /* Ocupa o espaço restante */
+  flex-grow: 1; 
   padding: 20px;
   display: flex;
-  flex-direction: column; /* Organiza os produtos em coluna */
+  flex-direction: column; 
 }
 
 .produto {
   display: flex;
-  align-items: center; /* Alinha os itens no centro verticalmente */
+  align-items: center; 
   margin-bottom: 20px;
   padding: 10px;
   border: 2px solid #ccc;
@@ -69,7 +66,7 @@
 }
 
 .produto img {
-  width: 100px; /* Ajuste conforme necessário */
+  width: 100px; 
   height: auto;
   border-radius: 5px;
   margin-right: 10px;
@@ -78,12 +75,12 @@
 .produto-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinha as informações do produto à esquerda */
-  flex-grow: 1; /* Permite que o contêiner das informações cresça */
+  align-items: flex-start; 
+  flex-grow: 1; 
 }
 
 .produto-nome, .produto-descricao, .produto-preco {
-  margin-bottom: 5px; /* Espaçamento entre os elementos */
+  margin-bottom: 5px; 
 }
 
 .produto-acoes {
@@ -93,9 +90,9 @@
 
 .produto-acoes button {
   border: none;
-  background-color: #eee; /* Fundo cinza claro para os botões */
-  padding: 5px 10px; /* Padding interno dos botões */
-  margin: 0 5px; /* Espaço entre os botões e o número */
+  background-color: #eee; 
+  padding: 5px 10px;
+  margin: 0 5px; 
 }
 
 .shopping-cart {

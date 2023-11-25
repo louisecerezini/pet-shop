@@ -1,48 +1,43 @@
-/* Estilo do contêiner do login */
 
 body {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  min-height: 100vh; /* Altura mínima da viewport */
-  margin: 0; /* Remove a margem padrão */
-  background-color: #f0f0f0; /* Define a cor de fundo do body, se necessário */
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+  margin: 0; 
+  background-color: #f0f0f0; 
 }
 
 .login-container {
-  background-color: #f8bbbb; /* Cor de fundo do contêiner */
-  width: 400px; /* Largura do contêiner */
-  margin: 50px auto; /* Centraliza o contêiner */
-  padding: 20px; /* Espaçamento interno */
-  border-radius: 8px; /* Bordas arredondadas */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  background-color: #f8bbbb; 
+  width: 400px; 
+  margin: 50px auto; 
+  padding: 20px; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-/* Estilo dos campos de entrada */
 .input-field {
-  width: 90%; /* Largura completa dentro do contêiner */
-  padding: 10px; /* Espaçamento interno para o texto */
-  margin-bottom: 15px; /* Espaçamento entre os campos */
-  border: 1px solid #ccc; /* Borda */
-  border-radius: 4px; /* Bordas arredondadas */
+  width: 90%; 
+  padding: 10px; 
+  margin-bottom: 15px;
+  border: 1px solid #ccc; 
+  border-radius: 4px;
 }
 
-/* Estilo do checkbox */
 .checkbox {
-  margin-bottom: 15px; /* Espaçamento abaixo do checkbox */
+  margin-bottom: 15px; 
 }
 
-/* Estilo dos botões */
 .button {
-  width: 95%; /* Largura completa dentro do contêiner */
-  padding: 10px; /* Espaçamento interno */
-  border: 5px; /* Sem borda */
-  border-radius: 4px; /* Bordas arredondadas */
-  margin-bottom: 10px; /* Espaçamento entre os botões */
-  cursor: pointer; /* Cursor de clique */
+  width: 95%; 
+  padding: 10px; 
+  border: 5px; 
+  border-radius: 4px; 
+  margin-bottom: 10px; 
+  cursor: pointer; 
 }
 
-/* Estilo específico para o botão de Entrar */
 .button-entrar {
   background-color:  rgb(232, 240, 254) !important; 
   border: 5px;
@@ -58,13 +53,12 @@ body {
 
 
 
-/* Estilo para o texto do link de cadastro */
 .cadastro-text {
-  text-align: center; /* Centraliza o texto */
-  margin-top: 20px; /* Espaçamento acima do texto */
+  text-align: center; 
+  margin-top: 20px; 
 }
 
 h2 {
-  text-align: center; /* Centraliza o texto horizontalmente */
+  text-align: center; 
 }
 

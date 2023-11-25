@@ -1,31 +1,31 @@
 .cadastro-pet-container {
-  background-color: #f8bbbb; /* Cor de fundo do contêiner de cadastro */
-  width: 400px; /* Largura do contêiner */
-  margin: 0 auto; /* Centraliza o contêiner */
-  padding: 20px; /* Espaçamento interno */
-  border-radius: 8px; /* Bordas arredondadas */
+  background-color: #f8bbbb; 
+  width: 400px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  border-radius: 8px; 
 }
 
 .cadastro-pet-container h2 {
-  text-align: center; /* Centraliza o título */
+  text-align: center; 
 }
 
 .cadastro-pet-container input {
-  width: 90%; /* Largura completa dentro do contêiner */
-  padding: 10px; /* Espaçamento interno para o texto */
-  margin-bottom: 15px; /* Espaçamento entre os campos */
-  border: 1px solid #ccc; /* Borda */
-  border-radius: 4px; /* Bordas arredondadas */
+  width: 90%; 
+  padding: 10px; 
+  margin-bottom: 15px;
+  border: 1px solid #ccc; 
+  border-radius: 4px;
 }
 
 .cadastro-pet-btn {
-  width: 95%; /* Largura completa */
-  padding: 10px; /* Espaçamento interno */
-  border: none; /* Sem borda */
-  border-radius: 4px; /* Bordas arredondadas */
-  background-color: #333; /* Cor de fundo */
-  color: black; /* Cor do texto */
-  cursor: pointer; /* Cursor de clique */
+  width: 95%; 
+  padding: 10px; 
+  border: none; 
+  border-radius: 4px; 
+  background-color: #333; 
+  color: black; 
+  cursor: pointer; 
   background-color:  rgb(232, 240, 254) !important; 
 }
 
